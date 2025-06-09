@@ -27,4 +27,12 @@ public class HomeController {
         return "saluti";
     }
 
+    @GetMapping("/colore")
+    public String Colore(Model model, @RequestParam(name = "color") String color) {
+
+        model.addAttribute("color", color);
+
+        return "colore";
+    }
+
 }
